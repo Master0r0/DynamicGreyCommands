@@ -1,6 +1,6 @@
-package com.master0r0.github.dynamicgreycommands;
+package com.github.master0r0.dynamicgreycommands;
 
-import com.master0r0.github.dynamicgreycommands.Commands.CommandRegistry;
+import com.github.master0r0.dynamicgreycommands.Commands.CommandRegistry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import sx.blah.discord.api.IDiscordClient;

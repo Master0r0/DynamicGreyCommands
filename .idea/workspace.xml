@@ -7,9 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d51b40c-f07f-4296-99b9-b0dd54975896" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/master0r0/github/dynamicgreycommands/DynamicGreyCommands.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/master0r0/github/dynamicgreycommands/Commands/CommandRegistry.java" afterPath="$PROJECT_DIR$/src/com/master0r0/github/dynamicgreycommands/Commands/CommandRegistry.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/master0r0/github/dynamicgreycommands/DynamicGreyCommandsModule.java" afterPath="$PROJECT_DIR$/src/com/master0r0/github/dynamicgreycommands/DynamicGreyCommandsModule.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/master0r0/github/dynamicgreycommands/Commands/CommandRegistry.java" afterPath="$PROJECT_DIR$/src/com/github/master0r0/dynamicgreycommands/Commands/CommandRegistry.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/master0r0/github/dynamicgreycommands/Commands/DynCommand.java" afterPath="$PROJECT_DIR$/src/com/github/master0r0/dynamicgreycommands/Commands/DynCommand.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/master0r0/github/dynamicgreycommands/Commands/ReloadCommand.java" afterPath="$PROJECT_DIR$/src/com/github/master0r0/dynamicgreycommands/Commands/ReloadCommand.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/master0r0/github/dynamicgreycommands/DynamicGreyCommandsModule.java" afterPath="$PROJECT_DIR$/src/com/github/master0r0/dynamicgreycommands/DynamicGreyCommandsModule.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,8 +23,8 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DynamicGreyCommandsModule.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/master0r0/github/dynamicgreycommands/DynamicGreyCommandsModule.java">
+      <file leaf-file-name="DynamicGreyCommandsModule.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/github/master0r0/dynamicgreycommands/DynamicGreyCommandsModule.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
               <caret line="8" column="38" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="38" />
@@ -34,10 +36,10 @@
         </entry>
       </file>
       <file leaf-file-name="ReloadCommand.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/master0r0/github/dynamicgreycommands/Commands/ReloadCommand.java">
+        <entry file="file://$PROJECT_DIR$/src/com/github/master0r0/dynamicgreycommands/Commands/ReloadCommand.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
-              <caret line="22" column="30" lean-forward="true" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+              <caret line="22" column="30" lean-forward="false" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -45,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DynCommand.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/master0r0/github/dynamicgreycommands/Commands/DynCommand.java">
+      <file leaf-file-name="DynCommand.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/github/master0r0/dynamicgreycommands/Commands/DynCommand.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding>
                 <element signature="e#583#584#0" expanded="true" />
                 <element signature="e#619#620#0" expanded="true" />
@@ -94,6 +96,7 @@
         <option value="$PROJECT_DIR$/src/com/master0r0/github/dynamicgreycommands/DynamicGreyCommands.java" />
         <option value="$PROJECT_DIR$/src/com/master0r0/github/dynamicgreycommands/DynamicGreyCommandsModule.java" />
         <option value="$PROJECT_DIR$/src/com/master0r0/github/dynamicgreycommands/Commands/CommandRegistry.java" />
+        <option value="$PROJECT_DIR$/src/com/github/master0r0/dynamicgreycommands/Commands/DynCommand.java" />
       </list>
     </option>
   </component>
@@ -136,13 +139,6 @@
               <item name="DynamicGreyCommandsModule" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="dynamicgreycommands" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DynGreyCommands" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DynamicGreyCommandsModule" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="dynamicgreycommands" type="462c0819:PsiDirectoryNode" />
-              <item name="Commands" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -329,7 +325,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/master0r0/github/dynamicgreycommands/DynamicGreyCommandsModule.java">
+    <entry file="file://$PROJECT_DIR$/src/com/github/master0r0/dynamicgreycommands/DynamicGreyCommandsModule.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -339,7 +335,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/master0r0/github/dynamicgreycommands/Commands/CommandRegistry.java">
+    <entry file="file://$PROJECT_DIR$/src/com/github/master0r0/dynamicgreycommands/Commands/CommandRegistry.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
           <caret line="31" column="123" lean-forward="false" selection-start-line="31" selection-start-column="123" selection-end-line="31" selection-end-column="123" />
@@ -349,7 +345,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/master0r0/github/dynamicgreycommands/Commands/DynCommand.java">
+    <entry file="file://$PROJECT_DIR$/src/com/github/master0r0/dynamicgreycommands/Commands/DynCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
@@ -405,17 +401,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/master0r0/github/dynamicgreycommands/DynamicGreyCommandsModule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="38" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/master0r0/github/dynamicgreycommands/Commands/CommandRegistry.java">
+    <entry file="file://$PROJECT_DIR$/src/com/github/master0r0/dynamicgreycommands/Commands/CommandRegistry.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="39" column="41" lean-forward="false" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
@@ -425,10 +411,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/master0r0/github/dynamicgreycommands/Commands/ReloadCommand.java">
+    <entry file="file://$PROJECT_DIR$/src/com/github/master0r0/dynamicgreycommands/Commands/ReloadCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
-          <caret line="22" column="30" lean-forward="true" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+          <caret line="22" column="30" lean-forward="false" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -443,13 +429,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/master0r0/github/dynamicgreycommands/Commands/DynCommand.java">
+    <entry file="file://$PROJECT_DIR$/src/com/github/master0r0/dynamicgreycommands/Commands/DynCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
             <element signature="e#583#584#0" expanded="true" />
             <element signature="e#619#620#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/github/master0r0/dynamicgreycommands/DynamicGreyCommandsModule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="38" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

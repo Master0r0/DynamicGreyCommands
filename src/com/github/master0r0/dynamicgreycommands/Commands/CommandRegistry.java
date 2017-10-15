@@ -1,8 +1,8 @@
-package com.master0r0.github.dynamicgreycommands.Commands;
+package com.github.master0r0.dynamicgreycommands.Commands;
 
+import com.github.master0r0.dynamicgreycommands.DynamicGreyCommandsModule;
 import com.github.master0r0.greycommands.GreyCommands;
 import com.github.master0r0.greycommands.Registry.Commands.BaseCommand;
-import com.master0r0.github.dynamicgreycommands.DynamicGreyCommandsModule;
 
 import java.io.BufferedReader;
 import java.io.File;

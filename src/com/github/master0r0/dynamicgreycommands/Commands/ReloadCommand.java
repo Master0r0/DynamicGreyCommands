@@ -1,4 +1,4 @@
-package com.master0r0.github.dynamicgreycommands.Commands;
+package com.github.master0r0.dynamicgreycommands.Commands;
 
 import com.github.master0r0.greycommands.GreyCommands;
 import com.github.master0r0.greycommands.Permissions.SuperUserPermission;
