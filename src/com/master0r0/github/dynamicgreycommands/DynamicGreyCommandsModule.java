@@ -1,10 +1,14 @@
 package com.master0r0.github.dynamicgreycommands;
 
 import com.master0r0.github.dynamicgreycommands.Commands.CommandRegistry;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import sx.blah.discord.api.IDiscordClient;
 import sx.blah.discord.modules.IModule;
 
 public class DynamicGreyCommandsModule implements IModule {
+
+    public static Logger logger = LoggerFactory.getLogger("DynGreyCommands");
 
     private static DynamicGreyCommandsModule instance;
     private IDiscordClient client;
@@ -13,7 +17,7 @@ public class DynamicGreyCommandsModule implements IModule {
     public boolean enable(IDiscordClient client) {
         this.client = client;
         instance = this;
-        DynamicGreyCommands.logger.info("Dynamic Commands Module Started!");
+        logger.info("Dynamic Commands Module Started!");
         new CommandRegistry();
         return true;
     }
@@ -24,7 +28,7 @@ public class DynamicGreyCommandsModule implements IModule {
 
     @Override
     public void disable() {
-        DynamicGreyCommands.logger.info("Dynamic Commands Module Stopping!");
+        logger.info("Dynamic Commands Module Stopping!");
     }
 
     @Override

@@ -2,7 +2,7 @@ package com.master0r0.github.dynamicgreycommands.Commands;
 
 import com.github.master0r0.greycommands.GreyCommands;
 import com.github.master0r0.greycommands.Registry.Commands.BaseCommand;
-import com.master0r0.github.dynamicgreycommands.DynamicGreyCommands;
+import com.master0r0.github.dynamicgreycommands.DynamicGreyCommandsModule;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -20,9 +20,9 @@ public class CommandRegistry {
     public CommandRegistry() {
         commands = new HashMap<>();
         if(loadFile()) {
-            DynamicGreyCommands.logger.info("Commands loaded successfully!");
+            DynamicGreyCommandsModule.logger.info("Commands loaded successfully!");
         }else
-            DynamicGreyCommands.logger.warn("Commands could not be loaded!");
+            DynamicGreyCommandsModule.logger.warn("Commands could not be loaded!");
         GreyCommands.getCommandRegistry().registerCommand(new ReloadCommand());
     }
 
@@ -31,12 +31,12 @@ public class CommandRegistry {
         File directory = new File(jarPath+"/DynCommands");
         if(!directory.isDirectory())
             if(!directory.mkdir())
-                DynamicGreyCommands.logger.error("Directory could not be created");
+                DynamicGreyCommandsModule.logger.error("Directory could not be created");
         File file = new File(directory.getPath()+"/commands.txt");
         if(!file.exists()){
             file = createFile(file);
             if(file==null)
-                DynamicGreyCommands.logger.error("Command File could not be created!");
+                DynamicGreyCommandsModule.logger.error("Command File could not be created!");
         }else{
             if(file.canRead()){
                 try {
@@ -46,21 +46,21 @@ public class CommandRegistry {
                         String cmd = line.split(":")[0];
                         String output = line.split(":")[1];
                         if (generateCommand(cmd, output))
-                            DynamicGreyCommands.logger.info(String.format("Command %s was added successfully", cmd));
+                            DynamicGreyCommandsModule.logger.info(String.format("Command %s was added successfully", cmd));
                         else
-                            DynamicGreyCommands.logger.info(String.format("Command %s failed to be created", cmd));
+                            DynamicGreyCommandsModule.logger.info(String.format("Command %s failed to be created", cmd));
                         line = reader.readLine();
                     }
                     reader.close();
                     for(String cmd:commands.keySet()){
-                        DynamicGreyCommands.logger.info(cmd);
+                        DynamicGreyCommandsModule.logger.info(cmd);
                     }
                     return true;
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
             }else{
-                DynamicGreyCommands.logger.error("Command File could not be read!");
+                DynamicGreyCommandsModule.logger.error("Command File could not be read!");
             }
         }
         return false;
@@ -80,15 +80,15 @@ public class CommandRegistry {
     private static File createFile(File file){
         try{
             if(file.createNewFile()){
-                DynamicGreyCommands.logger.info("Commands File Created!");
+                DynamicGreyCommandsModule.logger.info("Commands File Created!");
                 return file;
             }else{
-                DynamicGreyCommands.logger.warn("Command File could not be created!");
+                DynamicGreyCommandsModule.logger.warn("Command File could not be created!");
                 return null;
             }
         } catch (IOException e) {
             e.printStackTrace();
-            DynamicGreyCommands.logger.error("File Creation Failed!");
+            DynamicGreyCommandsModule.logger.error("File Creation Failed!");
             return null;
         }
     }
