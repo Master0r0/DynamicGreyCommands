@@ -7,16 +7,16 @@ import sx.blah.discord.handle.impl.events.guild.channel.message.MessageReceivedE
 
 public class DynCommand extends BaseCommand {
 
-    private static String name;
+    private String name;
 
-    private static String output;
+    private String output;
 
     public void setName(String name) {
-        DynCommand.name = name;
+        this.name = name;
     }
 
     public void setOutput(String output) {
-        DynCommand.output = output;
+        this.output = output;
     }
 
     @Override

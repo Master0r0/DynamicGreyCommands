@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/DynamicGreyCommandsModule.iml" filepath="$PROJECT_DIR$/DynamicGreyCommandsModule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DynGreyCommands.iml" filepath="$PROJECT_DIR$/DynGreyCommands.iml" />
     </modules>
   </component>
 </project>

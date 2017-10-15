@@ -4,8 +4,6 @@ import com.master0r0.github.dynamicgreycommands.Commands.CommandRegistry;
 import sx.blah.discord.api.IDiscordClient;
 import sx.blah.discord.modules.IModule;
 
-import java.net.URISyntaxException;
-
 public class DynamicGreyCommandsModule implements IModule {
 
     private static DynamicGreyCommandsModule instance;
@@ -14,12 +12,9 @@ public class DynamicGreyCommandsModule implements IModule {
     @Override
     public boolean enable(IDiscordClient client) {
         this.client = client;
+        instance = this;
         DynamicGreyCommands.logger.info("Dynamic Commands Module Started!");
-        try {
-            new CommandRegistry();
-        } catch (URISyntaxException e) {
-            e.printStackTrace();
-        }
+        new CommandRegistry();
         return true;
     }
 
