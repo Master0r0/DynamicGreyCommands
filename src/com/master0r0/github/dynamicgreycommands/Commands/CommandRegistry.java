@@ -3,7 +3,6 @@ package com.master0r0.github.dynamicgreycommands.Commands;
 import com.github.master0r0.greycommands.GreyCommands;
 import com.github.master0r0.greycommands.Registry.Commands.BaseCommand;
 import com.master0r0.github.dynamicgreycommands.DynamicGreyCommands;
-import com.master0r0.github.dynamicgreycommands.DynamicGreyCommandsModule;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -17,19 +16,26 @@ public class CommandRegistry {
 
     private Map<String,BaseCommand> commands = new HashMap<>();
 
+    private String jarPath = CommandRegistry.class.getProtectionDomain().getCodeSource().getLocation().getPath();
+
     public CommandRegistry() throws URISyntaxException {
         if(loadFile()) {
             for(String command:commands.keySet()){
                 GreyCommands.getCommandRegistry().registerCommand(commands.get(command));
             }
+            DynamicGreyCommands.logger.warn("Commands loaded successfully!");
         }else
             DynamicGreyCommands.logger.warn("Commands could not be loaded!");
     }
 
     private boolean loadFile(){
-
-        File file = new File("commands.txt");
-        DynamicGreyCommands.logger.info(CommandRegistry.class.getProtectionDomain().getCodeSource().getLocation().getPath());
+        jarPath = jarPath.substring(1,jarPath.lastIndexOf("/") );
+        DynamicGreyCommands.logger.info(jarPath+"/DynCommands/commands.txt");
+        File directory = new File(jarPath+"/DynCommands");
+        if(!directory.isDirectory())
+            if(!directory.mkdir())
+                DynamicGreyCommands.logger.error("Directory could not be created");
+        File file = new File(directory.getPath()+"/commands.txt");
         if(!file.exists()){
             file = createFile(file);
             if(file==null)
@@ -39,14 +45,17 @@ public class CommandRegistry {
                 try {
                     BufferedReader reader = new BufferedReader(new FileReader(file));
                     String line = reader.readLine();
-                    while(!line.equals("")){
+                    while (line!=null) {
                         String cmd = line.split(":")[0];
                         String output = line.split(":")[1];
-                        if(generateCommand(cmd,output))
-                            DynamicGreyCommands.logger.info(String.format("Command %s was added successfully",cmd));
+                        DynamicGreyCommands.logger.info(String.format("Adding Command %s", cmd));
+                        if (generateCommand(cmd, output))
+                            DynamicGreyCommands.logger.info(String.format("Command %s was added successfully", cmd));
                         else
-                            DynamicGreyCommands.logger.info(String.format("Command %s failed to be created",cmd));
+                            DynamicGreyCommands.logger.info(String.format("Command %s failed to be created", cmd));
+                        line = reader.readLine();
                     }
+                    return true;
                 } catch (IOException e) {
                     e.printStackTrace();
                 }

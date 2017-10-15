@@ -20,7 +20,6 @@ public class DynamicGreyCommandsModule implements IModule {
         } catch (URISyntaxException e) {
             e.printStackTrace();
         }
-        System.out.println("WTF");
         return true;
     }
 
