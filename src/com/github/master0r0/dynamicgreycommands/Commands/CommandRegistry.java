@@ -52,9 +52,6 @@ public class CommandRegistry {
                         line = reader.readLine();
                     }
                     reader.close();
-                    for(String cmd:commands.keySet()){
-                        DynamicGreyCommandsModule.logger.info(cmd);
-                    }
                     return true;
                 } catch (IOException e) {
                     e.printStackTrace();
